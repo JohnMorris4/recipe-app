@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Recipe | Home Page</title>
 </head>
 <body>
-    <h1>Welcome to the recipe app sdfadfas what is this doing Testing out upstream remotes</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+    </tr>
+
+    <tr th:each="recipe : ${recipies}">
+        <td th:text="${recipe.id}">id</td>
+        <td th:text="${recipe.description}">desc</td>
+
+    </tr>
+
+</table>
 </body>
 </html>
