@@ -19,12 +19,11 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
-    public Set<Recipe> getRecipies() {
+    public Set<Recipe> getRecipes() {
         log.debug("Im in the service logging");
 
         Set<Recipe> recipeSet = new HashSet<>();
         recipeRepository.findAll().iterator().forEachRemaining(recipeSet::add);
-
         return recipeSet;
     }
 }
