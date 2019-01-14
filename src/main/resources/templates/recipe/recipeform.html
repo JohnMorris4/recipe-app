@@ -30,7 +30,7 @@
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-md-3 form-group">
+                                <div class="col-md-8 form-group">
                                     <label>Recipe Description:</label>
                                     <input type="text" class="form-control" th:field="*{description}"/>
                                 </div>
@@ -81,7 +81,10 @@
                                     <label>Source:</label>
                                     <input type="text" class="form-control" th:field="*{source}"/>
                                 </div>
-                                <div class="col-md-3 form-group">
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 form-group">
                                     <label>URL:</label>
                                     <input type="text" class="form-control" th:field="*{url}"/>
                                 </div>
@@ -91,12 +94,12 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="col-md-11">
+                                <div class="col-md-10">
                                     <h1 class="panel-title">Ingredients</h1>
                                 </div>
-                                <span>
+                                <div class="col-md-1">
                                     <button class="btn btn-default" href="#" role="button">Edit</button>
-                                </span>
+                                </div>
                             </div>
                         </div>
                         <div class="panel-body">
