@@ -21,15 +21,22 @@
             crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
 </head>
 <body>
-<!--/*@thymesVar id="recipe" type="guru.springframework.domain.Recipe"*/-->
-<!--/*@thymesVar id="ingredients" type="java.util.Set<guru.springframework.commands.IngredientCommand>"*/-->
+<!--/*@thymesVar id="recipe" type="com.morrisje.domain.Recipe"*/-->
+<!--/*@thymesVar id="ingredients" type="java.util.Set<com.morrisje.commands.IngredientCommand>"*/-->
 <div class="container-fluid" style="margin-top: 20px">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
 
                 <div class="panel-heading">
-                    <h1 class="panel-title">Ingredients</h1>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>Ingredient</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <a class="btn btn-default" href="#" th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/new'}" role="button">New</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="panel-body">
 
