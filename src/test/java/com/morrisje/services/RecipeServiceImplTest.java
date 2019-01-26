@@ -3,6 +3,7 @@ package com.morrisje.services;
 import com.morrisje.converters.RecipeCommandToRecipe;
 import com.morrisje.converters.RecipeToRecipeCommand;
 import com.morrisje.domain.Recipe;
+import com.morrisje.exceptions.NotFoundException;
 import com.morrisje.repositories.RecipeRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,6 +52,15 @@ public class RecipeServiceImplTest {
 
         assertEquals(recipes.size(), 1);
         verify(recipeRepository, times(1)).findAll();
+    }
+
+    @Test(expected = NotFoundException.class)
+    public void getRecipeByIdNotFound() throws Exception {
+        Optional<Recipe> recipeOptional = Optional.empty();
+
+        when(recipeRepository.findById(anyLong())).thenReturn(recipeOptional);
+
+        Recipe recipeReturned = recipeService.findById(1l);
     }
 
     @Test

@@ -93,9 +93,9 @@ public class ImageControllerTest {
                 .andExpect(status().isOk())
                 .andReturn().getResponse();
 
-        byte[] reponseBytes = response.getContentAsByteArray();
+        byte[] responseBytes = response.getContentAsByteArray();
 
-        assertEquals(s.getBytes().length, reponseBytes.length);
+        assertEquals(s.getBytes().length, responseBytes.length);
     }
 
 }
