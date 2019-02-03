@@ -77,7 +77,7 @@ public class RecipeController {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(NumberFormatException.class)
-    public ModelAndView handleNumberFormatException(Exception exception) {
+    public ModelAndView handleNumberFormat(Exception exception) {
         log.error("Number Format Exception Error");
         log.error(exception.getMessage());
 
